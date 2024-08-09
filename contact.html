@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Publication page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav id="desktop-nav">
+        <div class="logo">Kishore Kumar K</div>
+        <div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="publications.html">Publications</a></li>
+                <li><a href="teaching.html">Teaching</a></li>
+                <li><a href="groupmembers.html">Group Members</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="contact">
+        <div class="block">
+            <div class="contact-info">
+                <div class="info"> 
+                    <h2>Contact Information</h2>
+                    <p>Email: kishorekumar.aer@bmsce.ac.in</p>
+                    <p>kishore26may@gmail.com</p>
+                    <p>Phone: +91 9963906412</p>
+                    <p>Address: B.M.S. College of Engineering, Bull Temple Road, Bangalore - 560 019 Karnataka, India.</p>
+                </div>
+            </div>
+            <div class="contact-form">
+                <h2>Contact Form</h2>
+               
+                <form id="contactForm" action="https://formsubmit.co/el/wuvato" method="POST" method="POST">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                    
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" rows="4" required></textarea>
+                    
+                    <button type="button" onclick="sendEmail()">Send</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Your Company. All rights reserved.</p>
+    </footer>
+
+    <script>
+       
+            function sendEmail() {
+                var name = document.getElementById('name').value;
+                var email = document.getElementById('email').value;
+                var message = document.getElementById('message').value;
+        
+                var subject = 'Contact Form Submission from ' + name;
+                var body = 'Name: ' + name + '\nEmail: ' + email + '\n\nMessage:\n' + message;
+        
+                var mailtoLink = 'mailto:kishorekumar.aer@bmsce.ac.in?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        
+                // Directly set the location to the mailto link
+                window.location.href = mailtoLink;
+            }
+        
+        
+        
+    </script>
+</body>
+</html>
+
